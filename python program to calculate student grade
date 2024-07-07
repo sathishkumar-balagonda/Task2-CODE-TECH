@@ -1,49 +1,30 @@
-# python program to calculate studentt grade
-def inputmark():
-    print('Enter Student ID :')
-    id = int (input())
-    print ('Enter Exam Score :')
-    exam=int(input())
-    print('Enter all subjects marks :')
-    mark1 =int(input())
-    mark2 =int(input())
-    mark3 =int(input())
-    mark3 =int(input())
-    mark4 =int(input())
-    mark5 =int(input())
-    mark6 =int(input())
-    mark7 =int(input())
-    sum = (mark1+mark2+mark3+mark4+mark5+mark6+mark7)
-    avge=sum/7
-    print('Average is :'+str(avge))
-    print('Final mark is :',compute_mark(avge,exam))
-    print('Letter Grade is : ',getgrade(compute_mark(avge,exam)))
-    print_Remark(getgrade(compute_mark(avge,exam)))
-    return avge
-def compute_mark(avge,exam):
-    final_mark=0.4*avge+0.6*exam
-    return final_mark
-def getgrade(fianl_mark):
-    if 90<=fianl_mark<=100:
-        grade='A'
-    elif 80<=fianl_mark<=89:
-        grade='B'
-    elif 70<=fianl_mark<=79:
-        grade='C'
-    elif 60<=fianl_mark<=69:
-        grade='D'
-    else:
-        grade='F'
-        return grade
-def print_Remark(grade):
-    if grade=='A':
-        print ('Remark : Excellent')
-    elif grade=='B':
-        print ('Remark : Good')
-    elif grade=='C':
-        print ('Remark : Satisfactory')
-    elif grade=='D':
-        print ('Remark : Fair')
-    elif grade=='F':
-        print ('Remark : Fail')
-inputmark()
+# python program to calculate the grade of student
+print("Enter 'x' for Exit")
+print ('Enter Scores Obtained in 5 Subjects :')
+score1=input()
+if score1=='x':
+    exit();
+else:
+  score1 =int(score1)
+  score2 =int(input())
+  score3 =int(input())
+  score4 =int(input())
+  score5 =int(input())
+  sum = score1+score2+score3+score4+score5
+  avg=sum/5
+  if (avg>=91 and avg<=100):
+     print('Overall Grade is : A+')
+  elif (avg>=81 and avg<=90):
+     print('Overall Grade is : A')
+  elif (avg>=71 and avg<=80):
+     print('Overall Grade is : B+')
+  elif (avg>=61 and avg<=70):
+     print('Overall Grade is : B')
+  elif (avg>=51 and avg<=60):
+     print('Overall Grade is : C')
+  elif (avg>=41 and avg<=50):
+     print('Overall Grade is : D')
+  elif (avg>=0 and avg<=40):
+     print('Overall Grade is : F')
+  else:
+     print('Invalid Input...! ')
