@@ -8,34 +8,49 @@ Duration : July to September 2024
 
 This project involves developing a Python program that calculates the final grades of students based on their scores in various subjects or assignments. The program is designed to streamline the grade calculation process, ensuring accuracy and efficiency.
 
-* Key Features:
+1. Purpose:
 
-1. Input Handling:
-   - The program accepts input for scores obtained by students in different subjects or assignments.
-   - It also takes into account the weightage of each subject or assignment, allowing for flexible grade calculations.
+The program calculates the grade of a student based on their scores.
+It uses functions to perform operations like summing scores and calculating averages.
+It allows the user to exit the program by entering 'x'.
 
-2. Grade Calculation:
-   - The program computes the weighted average of the scores based on the provided weightage.
-   - It calculates the total score for each student by summing up the weighted scores.
+2. Features:
 
-4. Grading Scale:
-   - The program uses a predefined grading scale to determine the final grade based on the total score.
-   - The grading scale can be customized to fit different grading systems.
+Input Handling: Continuously accepts scores until the user decides to exit.
+Functions:
+sum_scores(scores): Calculates the sum of scores entered.
+calculate_average(scores): Computes the average of scores entered.
+Grade Calculation: Determines the grade based on the average score obtained.
+User Interaction: Provides a simple command-line interface for input and output.
 
-5. Output:
-   - The final grades are displayed in a clear and concise manner, making it easy for students and educators to understand.
+3. Program Flow:
 
-*Usage:
+Initialization:
 
-- Users input the scores and weightage for each subject or assignment.
-- The program calculates the weighted average and total score.
-- Based on the total score, the program assigns a final grade according to the grading scale.
-- The final grade is then displayed for each student.
+Initialize an empty list to store scores.
+Input Loop:
+Prompt the user to enter scores one by one.
+Check if the user wants to exit (by entering 'x').
+Add each score to the list until the user exits.
 
-*Benefits:
+Calculations:
+Use the sum_scores function to compute the total sum of scores.
+Use the calculate_average function to determine the average score.
 
-- Efficiency: Automates the grade calculation process, saving time and effort.
-- Accuracy: Ensures precise calculations, reducing the possibility of errors.
-- Flexibility: Adapts to different grading systems and weightage criteria.
+Grade Determination:
+Based on the average score, decide and display the corresponding grade (e.g., A, B, C, etc.).
 
-This project serves as a valuable tool for educators and students, simplifying the process of grade calculation and providing accurate results.
+Output:
+Display the total sum, average score, and final grade to the user.
+
+4. Example Workflow:
+
+User starts the program.
+Enters scores (e.g., 85, 90, 78).
+Decides to exit by typing 'x'.
+Program calculates the sum of scores, average score, and determines the grade.
+Outputs the results to the user.
+
+Conclusion:
+
+This Python program calculates student grades based on input scores. It uses functions for summing scores, calculating averages, and determining grades. The program allows continuous score entry until the user exits with 'x'. It provides a basic yet effective demonstration of input handling, function usage, and simple output formatting in Python.
